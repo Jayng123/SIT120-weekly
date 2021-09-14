@@ -1,1 +1,2 @@
-# SIT120-weekl
+# SIT120-weekly
+
