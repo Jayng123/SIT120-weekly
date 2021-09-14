@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <title>Task 3</title>
+</head>
+<body>
+    <div id="root">
+      <p>Your name is {{message}}</p> 
+      <input type="text" placeholder="Enter your message" v-model="message">
+
+      <p>Message length is: {{message.split('').length}}</p>
+      <p v-if="message.split('').length >= 10" style="color: green;">Message is large</p>
+      <p v-if="message.split('').length >=6 && message.split('').length < 15" style="color: blue;">Message is medium</p>
+      <p v-if="message.split('').length >=0 && message.split('').length < 6" style="color: red;">Message is small</p>
+
+
+    </div>
+    <script>
+        const app= new Vue({
+            el: '#root',
+            data: {
+                message: ''
+            }
+        })
+        
+    </script>
+</body>
+
+
+
+
+</html>
