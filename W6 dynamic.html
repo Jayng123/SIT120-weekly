@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Week 6</title>
+</head>
+<body>
+    <div id="v-model-select-dynamic" class="demo">
+        <select v-model="selected">
+          <option v-for="option in options" v-bind:value="option.value">
+            {{ option.text }}
+          </option>
+        </select>
+        <span>Price: {{ selected }}</span>
+      </div>
+</body>
+
+
+<script src="https://unpkg.com/vue@next"></script>
+    <script>
+Vue.createApp({
+  data() {
+    return {
+      selected: 'A',
+      options: [
+        { text: 'Mango', value: '2.00' },
+        { text: 'Apple', value: '1.00' },
+        { text: 'Orange', value: '3.00' }
+      ]
+    }
+  }
+}).mount('#v-model-select-dynamic')
+    </script>
+
+</html>
