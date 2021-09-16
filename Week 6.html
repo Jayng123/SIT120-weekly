@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Week 6</title>
+</head>
+<body>
+<form id="draft">
+    <p>
+        <input type="text" v-model="msg">
+        {{ msg }}
+
+    </p>
+
+    <p>
+        <input type="checkbox" v-model="checked">
+        {{checked ? "yes" : "no"}}
+    </p>
+
+
+</form>
+</body>
+
+
+<script src="https://unpkg.com/vue@next"></script>
+    <script>
+        new vue({
+            el: '#draft',
+            data: {
+                msg     : "hello!",
+                checked : true,
+            }
+
+        })
+      
+        
+    
+    </script>
+
+</html>
